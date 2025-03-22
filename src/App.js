@@ -32,7 +32,7 @@ const App = () => {
 
     setLoading(true);
     try {
-      const response = await axios.get(`http://localhost:5000/search?query=${searchTerm}&filter=${filter}&platform=${platform}&page=${newPage}`);
+      const response = await axios.get(`https://image-api-backend.onrender.com/search?query=${searchTerm}&filter=${filter}&platform=${platform}&page=${page}`);
       setPrices(response.data.prices);
     } catch (error) {
       console.error('Error searching for prices', error);
